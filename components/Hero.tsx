@@ -14,7 +14,7 @@ export default function Hero() {
      className='h-screen flex flex-col space-y-0 items-center justify-center overflow-hidden text-center'>
             <div className='h-10'></div>
       <BackgroundCircles />
-      <Image src={mePng} alt="Prathamesh" className='h-56 w-56 mx-auto rounded-full object-cover'/>
+      <Image src={mePng} alt="Prathamesh" className='mx-auto rounded-full object-cover h-[232px] w-[240px]'/>
       {/* Typewriting sentences */}
       <div className='h-10'>
       </div>
@@ -28,7 +28,7 @@ export default function Hero() {
             Hello, This is<span className="type" > Prathamesh Pawar <br/> &lt;Let's Upgrade it!/&gt;</span>
           </h1>
         </div>
-        <div className="HerobuttonContainer">
+        <div className="HerobuttonContainer mt-8">
           <Link href='#about'>
             <button className='HeroButton'>About</button>
           </Link>
