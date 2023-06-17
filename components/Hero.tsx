@@ -18,14 +18,14 @@ export default function Hero() {
       {/* Typewriting sentences */}
       <div className='h-10'>
       </div>
-      <div className='text-center w-[400px] md:w-[600px] lg:w-[800px] z-20'>
+      <div className='text-center w-[440px] md:w-[600px] lg:w-[800px] z-20'>
         <h2 className='text-sm font-extrabold uppercase text-gray-400 pb-6 tracking-[10px]'>
           Aspiring Software Developer
         </h2>
         <div
         className="typewriting text-2xl md:text-3xl lg:text-4xl font-mono font-semibold scroll-px-10">
           <h1>
-            Hello, This is<span className="type" > Prathamesh Pawar <br/> &lt;There's way to do it better/&gt;</span>
+            Hello, This is<span className="type" > Prathamesh Pawar <br/> &lt;Let's Upgrade it!/&gt;</span>
           </h1>
         </div>
         <div className="HerobuttonContainer">

@@ -29,7 +29,6 @@ export default function Header({}:Props) {
                 network='email'
                 bgColor='transparent'
                 fgColor='gray'
-
             />
             <p className='uppercase hidden md:inline-flex text-sm text-gray-400'>Get in Touch</p>
         </motion.div>

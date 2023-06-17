@@ -10,7 +10,7 @@
 
 @layer components{
   .HeroButton{
-      @apply px-6 py-2 border border-[#111111] rounded-full uppercase text-sm text-gray-500
+      @apply px-3 md:px-6 lg:px-6 py-2 border border-[#111111] rounded-full uppercase text-sm text-gray-500
       font-bold transition-all tracking-widest hover:border-[#434343] hover:text-gray-200 hover:cursor-pointer
       border-t-0 border-l-0 border-r-0 hover:border-r-2
   }
