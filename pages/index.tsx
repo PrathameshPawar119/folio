@@ -19,19 +19,19 @@ export default function Home() {
       </Head>
 
 
-        <div className='sticky top-0'>
+        <div className='sticky top-0 mb-100' style={{zIndex:26}}>
           <Header/>
         </div>
 
-        <section id='hero' className='snap-start'> 
+        <section id='hero' className='snap-start' style={{zIndex:1}}> 
           <Hero />
         </section>
 
-        <section id='about' className='snap-center'>
+        <section id='about' className='snap-center' style={{zIndex:1}}>
           <About />
         </section>
 
-        <section id='experience' className='snap-end'>
+        <section id='experience' className='snap-end' style={{zIndex:1}}>
           <Experience />
         </section>
       </main>

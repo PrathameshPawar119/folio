@@ -11,8 +11,9 @@ export default function Hero() {
     initial={{opacity:0, scale:0.8}}
     animate={{opacity:1, scale:1}}
     transition={{duration:3}}
-     className='h-screen flex flex-col space-y-0 items-center justify-center overflow-hidden text-center'>
-            <div className='h-10'></div>
+     className='h-screen flex flex-col space-y-0 items-center justify-center overflow-hidden text-center z-0'>
+      <div className='h-32'></div>
+
       <BackgroundCircles />
       <Image src={mePng} alt="Prathamesh" className='mx-auto rounded-full object-cover h-[232px] w-[240px]'/>
       {/* Typewriting sentences */}
