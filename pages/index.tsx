@@ -4,6 +4,9 @@ import Header from '../components/Header'
 import Hero from '../components/Hero'
 import About from '@/components/About'
 import Experience from '@/components/Experience'
+import Skills from '@/components/Skills'
+import Projects from '@/components/Projects'
+import ContactMe from '@/components/ContactMe'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -31,8 +34,21 @@ export default function Home() {
           <About />
         </section>
 
-        <section id='experience' className='snap-end' style={{zIndex:1}}>
+        <section id='experience' className='snap-center' style={{zIndex:1}}>
           <Experience />
+        </section>
+
+        <section id='skills' className='snap-center' style={{zIndex:1}}>
+          <Skills/>
+        </section>
+
+        <section id='projects' className='snap-center' style={{zIndex:1}}>
+          <Projects />
+        </section>
+
+        
+        <section id='contactme' className='snap-end' style={{zIndex:1}}>
+          <ContactMe />
         </section>
       </main>
   )
