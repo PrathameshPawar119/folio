@@ -14,6 +14,11 @@
       font-bold transition-all tracking-widest hover:border-[#434343] hover:text-gray-200 hover:cursor-pointer
       border-t-0 border-l-0 border-r-0 hover:border-r-2
   }
+
+  .ContactInput{
+    @apply outline-none bg-slate-300/10 rounded-sm border-b px-2 py-4 text-gray-300 border-[#242424]
+    placeholder-gray-300 transition-all focus:border-[#F7ABBA]/80 focus:text-[#F7ABBA]/80
+  }
 }
 
 @media (prefers-color-scheme: dark) {

@@ -17,7 +17,7 @@ export default function Skills({}: Props) {
         initial={{opacity:0}}
         whileInView={{opacity:1}}
         transition={{duration:1.4}}
-        className='grid grid-cols-4 gap-4 xl:gap-5 mt-20 xl:mt-32 w-max-6xl'>
+        className='grid grid-cols-4 gap-4 xl:gap-5 mt-20 xl:mt-32 w-max-5xl'>
         <Skill />
         <Skill />
         <Skill />
