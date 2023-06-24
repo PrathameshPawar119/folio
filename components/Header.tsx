@@ -30,8 +30,9 @@ export default function Header({}:Props) {
                 network='email'
                 bgColor='transparent'
                 fgColor='gray'
+                url='#contactme'
             />
-          <Link href={'#contactme'}>
+            <Link href={'#contactme'}>
               <p className='uppercase hidden md:inline-flex text-sm text-gray-400'>Get in Touch</p>
             </Link>
         </motion.div>
