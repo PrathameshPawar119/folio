@@ -1,4 +1,4 @@
-import React, { ChangeEvent, useState } from 'react'
+import React, { ChangeEvent, FormEvent, useState } from 'react'
 import {PhoneIcon, MapPinIcon, EnvelopeIcon} from '@heroicons/react/24/solid';
 import { motion } from 'framer-motion';
 import { PageInfo } from '@/typing';
@@ -9,11 +9,15 @@ type Props = {
 
 export default function ContactMe({pageInfo}:Props) {
     const [formData, setFormData] = useState({name: "", email: "", subject: "", message:""});
+
      const handleOnChange = (e : ChangeEvent<HTMLInputElement>) =>{
         setFormData({...formData, [e.target.name]:e.target.value});
     };
+    const handleTextAreaOnChange = (e : ChangeEvent<HTMLTextAreaElement>) =>{
+        setFormData({...formData, [e.target.name]:e.target.value});
+    };
 
-    const submitForm = (e : ChangeEvent<HTMLInputElement>)=>{ 
+    const submitForm = (e : FormEvent<HTMLFormElement>)=>{ 
       e.preventDefault();
       if(formData.name && formData.email && formData.subject)
        window.location.href = `mailto:${pageInfo.email}?subject=${formData.subject}&body=Hi, Myself ${formData.name}, ${formData.message} (${formData.email})`;
@@ -56,7 +60,7 @@ export default function ContactMe({pageInfo}:Props) {
               <input name='email' onChange={handleOnChange} className='ContactInput' placeholder='Email' type="email" required/>
             </div>
             <input name='subject' onChange={handleOnChange} className='ContactInput' type="text" placeholder='Subject' required/>
-            <textarea name='message' onChange={handleOnChange} className='ContactInput' placeholder='Message' ></textarea>
+            <textarea name='message' onChange={handleTextAreaOnChange} className='ContactInput' placeholder='Message' ></textarea>
             <button type="submit" className='bg-[#F7ABBA] px-4 py-4 transition-all duration-150 rounded-sm hover:bg-[#F7ABBA]/80 font-bold text-black'>Submit</button>
           </form>
     </motion.div>
