@@ -9,7 +9,7 @@ type Props = {
 
 export default function ContactMe({pageInfo}:Props) {
     const [formData, setFormData] = useState({name: "", email: "", subject: "", message:""});
-     const handleOnChange = (e) =>{
+     const handleOnChange = (e : ChangeEvent<HTMLInputElement>) =>{
         setFormData({...formData, [e.target.name]:e.target.value});
     };
 
