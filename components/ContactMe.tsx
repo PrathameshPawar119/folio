@@ -13,7 +13,7 @@ export default function ContactMe({pageInfo}:Props) {
         setFormData({...formData, [e.target.name]:e.target.value});
     };
 
-    const submitForm = (e)=>{ 
+    const submitForm = (e : any)=>{ 
       e.preventDefault();
       if(formData.name && formData.email && formData.subject)
        window.location.href = `mailto:${pageInfo.email}?subject=${formData.subject}&body=Hi, Myself ${formData.name}, ${formData.message} (${formData.email})`;
