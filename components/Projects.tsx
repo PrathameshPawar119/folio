@@ -1,13 +1,13 @@
 import React from 'react'
 import { motion } from 'framer-motion';
+import { Projects } from '@/typing';
+import { urlFor } from '@/sanity';
 
 type Props = {
-
+    projects : Projects[]
 };
 
-export default function Projects({}:Props) {
-
-    const projects = [1, 2, 3, 4, 5];
+export default function Projects({projects}:Props) {
 
   return (
     <motion.div
@@ -19,27 +19,39 @@ export default function Projects({}:Props) {
 
         <div className='relative flex w-full overflow-x-scroll snap-x snap-mandatory overflow-y-hidden z-20'>
             {
-                projects.map((project,i)=>(
-                    <div key={i}  className='w-screen flex-shrink-0 snap-center flex flex-col space-y-5 h-screen items-center justify-center
+                projects.reverse()?.map((project,i)=>(
+                    <div key={i}  className=' w-screen flex-shrink-0 snap-center flex flex-col space-y-5 h-screen items-center justify-center
                      p-16 md:p-44'>
                         <motion.img
                             initial={{ opacity:0, y:-100}}
                             whileInView={{y:0, opacity:1}}
                             transition={{duration:1.4}}
                             viewport={{once:true}}
-                            src="../static/images/mf.png" 
-                            className='max-h-[300px] max-w-[500px] md:max-h-[400px] md:max-w-[600px] xl:max-h-[500px] xl:max-w-[800px]' alt="Project" />
+                            src={urlFor(project.projectImage).url()} 
+                            className='max-h-[300px] w-screen md:max-h-[400px] md:max-w-[600px] xl:max-h-[500px] xl:max-w-[800px] mt-12' alt="Project" />
                         <motion.div            
                             initial={{opacity:0}}
                             whileInView={{opacity:1}}
                             transition={{duration:1.4}}
                             >
-                            <div className='space-y-10 px-0 md:px-10 max-w-6xl'>
-                                <h4 className='font-semibold text-center text-2xl md:text-3xl'>Relaxing Music Website</h4>
+                            <div className="tools space-x-2 my-2 flex flex-col items-center justify-center">
+                                <div className='space-y-10 px-0 md:px-10 max-w-6xl'>
+                                    <h4 className='font-semibold w-full text-center text-xl my-4 md:text-3xl hover:text-blue-300 transition-all duration-300 hover:underline'>
+                                        <a href={project?.linktoBuild}  target='_blank'>
+                                            {project?.title}
+                                        </a>
+                                    </h4>
+                                </div>
+                                <div className='flex flex-row'>
+                                    {
+                                        project?.technologies.map((technology)=> (
+                                            <img className='h-8 w-8 rounded-fill mx-1' key={technology._id} src={urlFor(technology.heroImage).url()} title={technology.title}/>
+                                        ))
+                                    }
+                                </div>
                             </div>
                             <p className='text-gray-200 text-base text-center md:text-left'>
-                                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nostrum magni possimus ad mollitia nisi esse sunt eaque cum nobis, accusantium fugit nam incidunt quis ipsam omnis vitae necessitatibus quas laborum.
-                                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nostrum magni possimus ad mollitia nisi esse sunt eaque cum nobis, accusantium fugit nam incidunt quis ipsam omnis vitae necessitatibus quas laborum.
+                                {project.summary}
                             </p>
                         </motion.div>
                     </div>
@@ -50,3 +62,4 @@ export default function Projects({}:Props) {
     </motion.div>
   )
 }
+

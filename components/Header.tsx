@@ -15,7 +15,7 @@ export default function Header({socials}:Props) {
         <motion.div
             initial={{x:-200, y:-10, opacity:0, scale:0.5}}
             animate={{x:0, y:0, opacity:1, scale:1}}
-            transition={{duration:0.8}}
+            transition={{duration:1.2}}
         >
           {
             socials.map((social, i)=>(

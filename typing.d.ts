@@ -31,6 +31,7 @@ export interface PageInfo extends SanityBody {
     email : string;
     address: string;
     backgroundInfo: Text;
+    heroImage: Image;
 }
 
 export interface Skills extends SanityBody {

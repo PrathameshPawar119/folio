@@ -57,28 +57,28 @@ export default function Home({pageInfo, experience, projects, skills, socials}: 
         </div>
 
         <section id='hero' className='snap-start' style={{zIndex:1}}> 
-          <Hero />
+          <Hero pageInfo={pageInfo}/>
         </section>
 
         <section id='about' className='snap-center' style={{zIndex:1}}>
-          <About />
+          <About pageInfo={pageInfo}/>
         </section>
 
         <section id='experience' className='snap-center' style={{zIndex:1}}>
-          <WorkExperience />
+          <WorkExperience experience={experience} />
         </section>
 
         <section id='skills' className='snap-center' style={{zIndex:1}}>
-          <SkillsComp />
+          <SkillsComp skills={skills}/>
         </section>
 
         <section id='projects' className='snap-center' style={{zIndex:1}}>
-          <ProjectsComp />
+          <ProjectsComp projects={projects} />
         </section>
 
         
         <section id='contactme' className='snap-end' style={{zIndex:1}}>
-          <ContactMe />
+          <ContactMe pageInfo={pageInfo}/>
         </section>
 
       {/* Footer go to top btn */}

@@ -1,11 +1,16 @@
 import React from 'react'
-import Image from 'next/image'
 import BackgroundCircles from './BackgroundCircles'
 import mePng from "../static/images/mepng.png"
 import { motion } from 'framer-motion'
 import Link from 'next/link'
+import { PageInfo } from '@/typing'
+import { urlFor } from '@/sanity'
 
-export default function Hero() {
+type Props = {
+  pageInfo: PageInfo
+}
+
+export default function Hero({pageInfo }: Props) {
   return (
     <motion.div
     initial={{opacity:0, scale:0.8}}
@@ -15,18 +20,18 @@ export default function Hero() {
       <div className='h-32'></div>
 
       <BackgroundCircles />
-      <Image src={mePng} alt="Prathamesh" className='mx-auto rounded-full object-cover h-[232px] w-[240px]'/>
+      <img src={urlFor(pageInfo?.heroImage).url() || mePng} alt="Prathamesh" className='mx-auto rounded-full object-cover h-[232px] w-[240px]'/>
       {/* Typewriting sentences */}
       <div className='h-10'>
       </div>
       <div className='text-center w-[440px] md:w-[600px] lg:w-[800px] z-20'>
         <h2 className='text-sm font-extrabold uppercase text-gray-400 pb-6 tracking-[10px]'>
-          Aspiring Software Developer
+          {pageInfo?.role || 'Aspiring Software Developer'}
         </h2>
         <div
         className="typewriting text-2xl md:text-3xl lg:text-4xl font-mono font-semibold scroll-px-10">
           <h1>
-            Hello, This is<span className="type" > Prathamesh Pawar <br/> &lt;Let's Upgrade it!/&gt;</span>
+            Hello, This is<span className="type" > {pageInfo?.name} <br/> &lt;Let's Upgrade it!/&gt;</span>
           </h1>
         </div>
         <div className="HerobuttonContainer mt-8">

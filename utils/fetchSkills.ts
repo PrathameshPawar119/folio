@@ -7,8 +7,6 @@ export const fetchSkills = async ()=> {
             Accept: "application/json"
         }
     });
-    console.log(res);
-
     const data = await res.json();
 
     const skills: Skills[] = data.skills;
