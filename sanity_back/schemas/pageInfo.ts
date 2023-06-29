@@ -49,16 +49,16 @@ export default defineType({
         {
             name: "backgroundInfo",
             title: "BackgroundInfo",
-            type: "string"
+            type: "text"
         },
-        {
-            name: "socials",
-            title: "Socials",
-            type: "array",
-            of: [
-                { type: "reference", to: { type: "socials" } }
-            ]
-        }
+        // {
+        //     name: "socials",
+        //     title: "Socials",
+        //     type: "array",
+        //     of: [
+        //         { type: "reference", to: { type: "socials" } }
+        //     ]
+        // }
     ]
 
 

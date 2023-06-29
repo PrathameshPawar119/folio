@@ -48,7 +48,7 @@ export default defineType({
     },
     {
       name: "points",
-      title: "Title",
+      title: "Points",
       type: "array",
       of: [{ type: "string" }]
     }

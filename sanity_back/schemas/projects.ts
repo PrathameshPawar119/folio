@@ -28,7 +28,7 @@ export default defineType({
       title: "Technologies",
       type: "array",
       of: [
-        { type: "reference", to: { type: "socials" } }
+        { type: "reference", to: { type: "skills" } }
       ]
     },
     {
