@@ -19,7 +19,7 @@ export default function About({pageInfo}:Props) {
       <h3 className='absolute top-24 text-2xl lg:text-3xl uppercase text-center tracking-[18px] text-gray-400 font-mono'> About</h3>
         <motion.img
           initial={{opacity:0, x:-140}}
-          transition={{duration:1}}
+          transition={{duration:1.4}}
           whileInView={{opacity:1, x:0}}
           viewport={{once:true}}
           src={urlFor(pageInfo?.profileImage).url() || '../static/images/meincaves.jpg'} 

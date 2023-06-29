@@ -1,6 +1,5 @@
 import React from 'react'
 import { motion } from 'framer-motion';
-import htmll from "../static/logos/html-5.png";
 import { Experience } from '@/typing';
 import { urlFor } from '@/sanity';
 
