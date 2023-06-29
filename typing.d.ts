@@ -30,7 +30,7 @@ export interface PageInfo extends SanityBody {
     phoneNumber : string;
     email : string;
     address: string;
-    backgroundInfo: Text;
+    backgroundInfo: string;
     heroImage: Image;
 }
 
@@ -57,7 +57,7 @@ export interface Projects extends SanityBody{
     _type: 'projects';
     title: string;
     projectImage: string;
-    summary: Text;
+    summary: string;
     technologies: Technology[];
     linktoBuild: string;
 }
