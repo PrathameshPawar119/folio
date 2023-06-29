@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { ChangeEvent, useState } from 'react'
 import {PhoneIcon, MapPinIcon, EnvelopeIcon} from '@heroicons/react/24/solid';
 import { motion } from 'framer-motion';
 import { PageInfo } from '@/typing';
@@ -13,7 +13,7 @@ export default function ContactMe({pageInfo}:Props) {
         setFormData({...formData, [e.target.name]:e.target.value});
     };
 
-    const submitForm = (e : any)=>{ 
+    const submitForm = (e : ChangeEvent<HTMLInputElement>)=>{ 
       e.preventDefault();
       if(formData.name && formData.email && formData.subject)
        window.location.href = `mailto:${pageInfo.email}?subject=${formData.subject}&body=Hi, Myself ${formData.name}, ${formData.message} (${formData.email})`;
