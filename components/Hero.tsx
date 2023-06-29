@@ -1,6 +1,5 @@
 import React from 'react'
 import BackgroundCircles from './BackgroundCircles'
-import mePng from "../static/images/mepng.png"
 import { motion } from 'framer-motion'
 import Link from 'next/link'
 import { PageInfo } from '@/typing'
@@ -20,7 +19,7 @@ export default function Hero({pageInfo }: Props) {
       <div className='h-32'></div>
 
       <BackgroundCircles />
-      <img src={urlFor(pageInfo?.heroImage).url() || mePng} alt="Prathamesh" className='mx-auto rounded-full object-cover h-[232px] w-[240px]'/>
+      <img src={urlFor(pageInfo?.heroImage).url()} alt="Prathamesh" className='mx-auto rounded-full object-cover h-[232px] w-[240px]'/>
       {/* Typewriting sentences */}
       <div className='h-10'>
       </div>
