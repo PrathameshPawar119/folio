@@ -1,4 +1,5 @@
-import React, { ChangeEvent, FormEvent, useState } from 'react'
+import React from 'react'
+import { ChangeEvent, FormEvent, useState } from 'react'
 import {PhoneIcon, MapPinIcon, EnvelopeIcon} from '@heroicons/react/24/solid';
 import { motion } from 'framer-motion';
 import { PageInfo } from '@/typing';
