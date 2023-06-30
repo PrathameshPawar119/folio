@@ -19,7 +19,7 @@ export default function Projects({projects}:Props) {
 
         <div className='relative flex w-full overflow-x-scroll snap-x snap-mandatory overflow-y-hidden z-20'>
             {
-                projects?.reverse().map((project)=>(
+                projects?.reverse().map((project, i)=>(
                     <div key={project._id}  className=' w-screen flex-shrink-0 snap-center flex flex-col space-y-5 h-screen items-center justify-center
                      p-16 md:p-44'>
                         <motion.img
@@ -38,7 +38,8 @@ export default function Projects({projects}:Props) {
                                 <div className='space-y-10 px-0 md:px-10 max-w-6xl'>
                                     <h4 className='font-semibold w-full text-center text-lg my-2 md:text-3xl hover:text-blue-300 transition-all duration-300 hover:underline'>
                                         <a href={project?.linktoBuild}  target='_blank'>
-                                            {project?.title}
+                                            
+                                            {`${i+1}/${projects?.length} - ${project?.title}`}
                                         </a>
                                     </h4>
                                 </div>
