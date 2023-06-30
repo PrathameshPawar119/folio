@@ -1,0 +1,6 @@
+{
+    "files.exclude": {
+        ".next\\trace": true
+    },
+    "workspace.isHidden": true
+}
