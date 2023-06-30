@@ -24,7 +24,7 @@ export default function About({pageInfo}:Props) {
           viewport={{once:true}}
           src={urlFor(pageInfo?.profileImage).url()} 
           alt='Prathamesh in caves' 
-          className='object-cover -mb-8 mt-28 md:mt-20 md:mb-0 flex-shrink-0 w-32 h-32 rounded-full
+          className='object-cover -mb-8 mt-28 md:mt-20 md:mb-0 flex-shrink-0 w-36 h-36 rounded-full
           md:rounded-lg md:w-64 md:h-96 xl:w-[400px] xl:h-[500px]'/>
         
         <motion.div
@@ -35,7 +35,7 @@ export default function About({pageInfo}:Props) {
           <h3 className='text-2xl font-semibold md:text-3xl md:mt-6'>
             Here's a <span className='underline decoration-slate-500'>little</span>  background
           </h3>
-          <p className='text-[13px] md:text-sm  text-slate-200'>
+          <p className='text-[14px] md:text-sm  text-slate-200'>
             {pageInfo?.backgroundInfo}
           </p>
         </motion.div>
