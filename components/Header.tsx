@@ -18,7 +18,7 @@ export default function Header({socials}:Props) {
             transition={{duration:1.2}}
         >
           {
-            socials.map((social, i)=>(
+            socials?.map((social, i)=>(
               <SocialIcon key={i} target='_blank' bgColor='transparent' fgColor='gray' url={social.url}/>
             ))
           }

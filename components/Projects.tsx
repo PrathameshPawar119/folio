@@ -19,7 +19,7 @@ export default function Projects({projects}:Props) {
 
         <div className='relative flex w-full overflow-x-scroll snap-x snap-mandatory overflow-y-hidden z-20'>
             {
-                projects.reverse()?.map((project)=>(
+                projects?.reverse().map((project)=>(
                     <div key={project._id}  className=' w-screen flex-shrink-0 snap-center flex flex-col space-y-5 h-screen items-center justify-center
                      p-16 md:p-44'>
                         <motion.img

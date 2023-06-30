@@ -9,7 +9,7 @@ type Props = {
 
 export default function Skills({skills}: Props) {
 
-  let dirPtr = skills.length/2;
+  let dirPtr = skills?.length/2;
   const whichDirection = (ptr : number) => {
     if(ptr > 0)
     {

@@ -109,6 +109,6 @@ export const getStaticProps: GetStaticProps<Props> = async ()=>{
       skills,
       socials
     },
-    revalidate:10
+    revalidate:20
   }
 }
