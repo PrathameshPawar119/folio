@@ -43,7 +43,7 @@ export default function Home({pageInfo, experience, projects, skills, socials}: 
 
   return (
     <main
-    className={`bg-[rgb(36, 36, 36)] text-white h-screen overflow-y-scroll overflow-x-hidden snap-y snap-mandatory scroll-smooth ${inter.className}`}
+    className={`bg-black text-white h-screen overflow-y-scroll overflow-x-hidden snap-y snap-mandatory scroll-smooth ${inter.className}`}
     >
       <Head>
         <title>

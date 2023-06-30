@@ -15,7 +15,7 @@ export default function Projects({projects}:Props) {
         whileInView={{opacity:1}}
         transition={{duration:1.4}}
         className='relative mx-auto overflow-hidden h-screen max-w-full flex flex-col md:text-row text-left items-center justify-evenly'>
-        <h3 className='absolute top-24 text-2xl xl:text-3xl uppercase text-gray-400 font-mono tracking-[16px]'>Projects</h3>
+        <h3 className='absolute top-20 text-2xl xl:text-3xl uppercase text-gray-400 font-mono tracking-[16px]'>Projects</h3>
 
         <div className='relative flex w-full overflow-x-scroll snap-x snap-mandatory overflow-y-hidden z-20'>
             {
@@ -28,7 +28,7 @@ export default function Projects({projects}:Props) {
                             transition={{duration:1.4}}
                             viewport={{once:true}}
                             src={urlFor(project.projectImage).url()} 
-                            className='max-h-[300px] w-screen md:max-h-[400px] md:max-w-[600px] xl:max-h-[500px] xl:max-w-[800px] mt-12' alt="Project" />
+                            className='max-h-[300px] w-screen md:max-h-[350px] md:max-w-[500px] xl:max-h-[450px] xl:max-w-[700px] mt-16' alt="Project" />
                         <motion.div            
                             initial={{opacity:0}}
                             whileInView={{opacity:1}}
@@ -36,7 +36,7 @@ export default function Projects({projects}:Props) {
                             >
                             <div className="tools space-x-2 my-2 flex flex-col items-center justify-center">
                                 <div className='space-y-10 px-0 md:px-10 max-w-6xl'>
-                                    <h4 className='font-semibold w-full text-center text-xl my-4 md:text-3xl hover:text-blue-300 transition-all duration-300 hover:underline'>
+                                    <h4 className='font-semibold w-full text-center text-lg my-2 md:text-3xl hover:text-blue-300 transition-all duration-300 hover:underline'>
                                         <a href={project?.linktoBuild}  target='_blank'>
                                             {project?.title}
                                         </a>
@@ -50,7 +50,7 @@ export default function Projects({projects}:Props) {
                                     }
                                 </div>
                             </div>
-                            <p className='text-gray-200 text-base text-center md:text-left'>
+                            <p className='text-gray-200 text-md md:text-lg text-center md:text-left md:mx-26'>
                                 {project.summary}
                             </p>
                         </motion.div>

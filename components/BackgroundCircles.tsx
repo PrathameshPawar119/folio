@@ -14,9 +14,9 @@ export default function BackgroundCircles() {
     className='relative flex justify-center items-center'>
       <div className='absolute border rounded-full border-double border-[#4f4f4f] h-[260px] w-[260px] mt-52 animate-ping'/>
       <div className='absolute border rounded-full border-[#333333] border-t-gray-500 h-[260px] w-[260px] mt-52 animate-spin'/>
-      <div className='absolute border rounded-full border-[#333333] h-[260px] w-[260px] mt-52 '/>
-      <div className='border rounded-full border-[#ffb1c8ff] opacity-20 h-[650px] w-[650px] absolute mt-52 animate-pulse'/>
-      <div className='absolute border rounded-full border-[#333333] h-[800px] w-[800px] mt-52 '/>
+      <div className='absolute border rounded-full border-[#333333]  h-[260px] w-[260px] mt-52 '/>
+      <div className='border rounded-full border-[#ffb1c8ff] opacity-20 h-[400px] w-[400px] md:h-[650px] md:w-[650px] absolute mt-52 animate-pulse'/>
+      <div className='absolute border rounded-full border-[#333333] h-[400px] w-[400px] md:h-[800px] md:w-[800px] mt-52 '/>
     </motion.div>
   )
 }

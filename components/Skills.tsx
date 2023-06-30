@@ -27,13 +27,12 @@ export default function Skills({skills}: Props) {
         transition={{duration:1.4}}
         className='h-screen flex flex-col items-center relative text-center md:text-left
          xl:flex-row max-w-7xl justify-center mx-auto'>
-      <h3 className='absolute top-24 uppercase text-slate-400 text-2xl xl:text-3xl font-mono text-center tracking-[16px]'>Skills</h3>
-      <h2 className='absolute top-36 uppercase text-slate-500 text-md font-mono text-center tracking-[4px] lg:tracking-[6px]'>Hover over skill for proficiency</h2>
+      <h3 className='absolute top-20 md:top-24 uppercase text-slate-400 text-2xl xl:text-3xl font-mono text-center tracking-[16px]'>Skills</h3>
       <motion.div         
         initial={{opacity:0}}
         whileInView={{opacity:1}}
         transition={{duration:1.4}}
-        className='grid grid-cols-4 md:grid-cols-5 gap-4 xl:gap-5 mt-20 xl:mt-32 w-max-5xl'>
+        className='grid grid-cols-3 md:grid-cols-4 xl:grid-cols-5 gap-4 xl:gap-5 mt-20 xl:mt-32 w-max-7xl'>
           {
             skills?.map((skill) => (
               <Skill key={skill._id} directionLeft={whichDirection(dirPtr)} skill={skill}/>   

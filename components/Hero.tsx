@@ -24,11 +24,11 @@ export default function Hero({pageInfo }: Props) {
       <div className='h-10'>
       </div>
       <div className='text-center w-[440px] md:w-[600px] lg:w-[800px] z-20'>
-        <h2 className='text-sm font-extrabold uppercase text-gray-400 pb-6 tracking-[10px]'>
+        <h2 className='text-[12px] md:text-sm  font-extrabold uppercase text-gray-400 pb-6 tracking-[10px]'>
           {pageInfo?.role || 'Aspiring Software Developer'}
         </h2>
         <div
-        className="typewriting text-2xl md:text-3xl lg:text-4xl font-mono font-semibold scroll-px-10">
+        className="typewriting text-xl md:text-3xl lg:text-4xl font-mono font-semibold scroll-px-10">
           <h1>
             Hello, This is<span className="type" > {pageInfo?.name} <br/> &lt;Let's Upgrade it!/&gt;</span>
           </h1>
