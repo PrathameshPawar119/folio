@@ -19,7 +19,7 @@ export default function ExperienceCard({exp}:Props) {
         whileInView={{y:0, opacity:1}}
         transition={{duration:1.4}}
         viewport={{once:true}}
-        className='w-20 h-24 md:h-[160px] md:w-[140px] xl:w-[160px] xl:h-[180px] rounded-full object-cover object-center'
+        className='w-20 h-20 md:h-[160px] md:w-[160px] xl:w-[180px] xl:h-[180px] rounded-full object-cover object-center'
         />
         <div className="px-4 md:px-6">
           <h2 className='text-xl md:text-3xl font-light'>{exp?.jobTitle}</h2>
@@ -37,7 +37,7 @@ export default function ExperienceCard({exp}:Props) {
               `${new Date(exp.dateStarted).toLocaleDateString('en-us', {year:"numeric", month:"short"})} - ${ exp.currentlyWorkingHere ? 'Present' : new Date(exp.dateEnded).toLocaleDateString('en-us', {year:"numeric", month:"short"})}`
             }
           </p>
-            <ul className='list-disc text-[12px] md:text-md pr-8 text-gray-300'>
+            <ul className='list-disc text-[12px] md:text-lg pr-8 text-gray-300'>
               {
                 exp.points.map((point, i) => (
                   <p key={i}>{point}</p>
