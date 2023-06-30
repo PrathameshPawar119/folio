@@ -55,7 +55,7 @@ export default function ContactMe({pageInfo}:Props) {
           </div>
         </div>
 
-          <form onSubmit={submitForm} className="flex flex-col space-y-2 mx-auto max-w-screen-sm w-fit max-w-3xl mt-12">
+          <form onSubmit={submitForm} className="flex flex-col space-y-2 mx-auto sm:max-w-screen-sm w-fit max-w-3xl mt-12">
             <div className='flex space-x-2 justify-between'>
               <input name='name' onChange={handleOnChange} className='ContactInput' placeholder='Name' type="text" required/>
               <input name='email' onChange={handleOnChange} className='ContactInput' placeholder='Email' type="email" required/>
