@@ -35,7 +35,7 @@ export default function About({pageInfo}:Props) {
           <h3 className='text-2xl font-semibold md:text-3xl md:mt-6'>
             Here's a <span className='underline decoration-slate-500'>little</span>  background
           </h3>
-          <p className='text-[14px] md:text-sm  text-slate-200'>
+          <p className='text-[16px] md:text-sm  text-slate-200'>
             {pageInfo?.backgroundInfo}
           </p>
         </motion.div>

@@ -31,7 +31,7 @@ export default function ContactMe({pageInfo}:Props) {
         initial={{opacity:0}}
         whileInView={{opacity:1}}
         transition={{duration:1.4}}
-        className=' relative h-screen flex text-center flex-col md:flex-row md:text-left px-10 mx-auto max-w-7xl items-center justify-center'>
+        className=' relative h-screen flex text-center flex-col lg:flex-row md:text-left px-10 mx-auto max-w-7xl items-center justify-center'>
         <h3 className='absolute top-24 text-gray-400 text-2xl md:text-3xl font-mono uppercase tracking-[16px] text-center'>Contact Me</h3>
 
         <div className='flex flex-col items-center justify-center space-y-4 mt-32 md:mt-0 md:space-x-22 md:mx-16'>
@@ -55,10 +55,10 @@ export default function ContactMe({pageInfo}:Props) {
           </div>
         </div>
 
-          <form onSubmit={submitForm} className="flex flex-col justify-center space-y-2 w-screen md:w-fit md:max-w-3xl mt-8">
-            <div className='flex space-x-2 justify-between'>
-              <input name='name' onChange={handleOnChange} className='ContactInput' placeholder='Name' type="text" required/>
-              <input name='email' onChange={handleOnChange} className='ContactInput' placeholder='Email' type="email" required/>
+          <form onSubmit={submitForm} className="flex flex-col gap-2 mt-10">
+            <div className=' flex md:flex-row gap-1'>
+              <input name='name' onChange={handleOnChange} className='ContactInput w-full' placeholder='Name' type="text" required/>
+              <input name='email' onChange={handleOnChange} className='ContactInput w-full' placeholder='Email' type="email" required/>
             </div>
             <input name='subject' onChange={handleOnChange} className='ContactInput' type="text" placeholder='Subject' required/>
             <textarea name='message' onChange={handleTextAreaOnChange} className='ContactInput' placeholder='Message' ></textarea>

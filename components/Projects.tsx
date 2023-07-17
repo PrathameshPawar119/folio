@@ -51,7 +51,7 @@ export default function Projects({projects}:Props) {
                                     }
                                 </div>
                             </div>
-                            <p className='text-gray-200 text-md md:text-lg text-center md:text-left md:mx-26'>
+                            <p className='text-gray-200 text-lg md:text-xl text-center md:text-left md:mx-26'>
                                 {project.summary}
                             </p>
                         </motion.div>
