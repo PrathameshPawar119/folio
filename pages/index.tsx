@@ -29,7 +29,7 @@ type Props = {
 
 export default function Home({pageInfo, experience, projects, skills, socials}: Props) {
 
- // footer btn display & hide logic 
+//  footer btn display & hide logic 
   // const footerBtn = document.getElementById("footerBtn");
   // footerBtn?.addEventListener("scroll", ()=>{
   //   if(document.body.scrollTop >60 || document.documentElement.scrollTop > 60)

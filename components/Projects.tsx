@@ -54,6 +54,7 @@ export default function Projects({projects}:Props) {
                             <p className='text-gray-200 text-lg md:text-xl text-center md:text-left md:mx-26'>
                                 {project.summary}
                             </p>
+                            <div>{`${i+1 < projects.length ? 'swipe right →' :''}`}</div>
                         </motion.div>
                     </div>
                 ))

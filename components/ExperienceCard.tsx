@@ -37,7 +37,7 @@ export default function ExperienceCard({exp}:Props) {
               `${new Date(exp.dateStarted).toLocaleDateString('en-us', {year:"numeric", month:"short"})} - ${ exp.currentlyWorkingHere ? 'Present' : new Date(exp.dateEnded).toLocaleDateString('en-us', {year:"numeric", month:"short"})}`
             }
           </p>
-            <ul className='list-disc text-[16px] md:text-lg pr-8 text-gray-300 overflow-y-scroll'>
+            <ul className='list-disc text-[16px] md:text-lg pr-8 text-gray-300'>
               {
                 exp.points.map((point, i) => (
                   <p key={i}>{point}</p>

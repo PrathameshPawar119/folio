@@ -42,7 +42,7 @@ export default function ContactMe({pageInfo}:Props) {
           <div className='space-y-2'>
             <div className='flex items-center space-x-5 justify-center'>
               <PhoneIcon  className='text-[#F7ABBA] animate-pulse w-4 h-4 md:w-10 md:h-10' />
-              <p className='text-md md:text-2xl'> <a href="tel:9324488517">+91 {pageInfo.phoneNumber}</a></p>
+              <p className='text-md md:text-2xl'> <a href={`tel:${pageInfo.phoneNumber}`}>+91 {pageInfo.phoneNumber}</a></p>
             </div>            
             <div className='flex items-center space-x-5 justify-center'>
               <EnvelopeIcon  className='text-[#F7ABBA] animate-pulse w-4 h-4 md:w-10 md:h-10' />
