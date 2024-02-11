@@ -49,6 +49,7 @@ export default function Home({pageInfo, experience, projects, skills, socials}: 
         <title>
           Prathamesh Pawar
         </title>
+        <meta name="google-site-verification" content="60_7SYi3TgmDiIlLJX2kG8Yb3Z3WhnSe-S42aI1qhSM" />
       </Head>
 
 
