@@ -1,10 +1,10 @@
 import React from 'react'
 import { motion } from 'framer-motion'
 import ExperienceCard from './ExperienceCard'
-import { Experience } from '@/typing'
+import { Experience as ExperienceType } from '@/typing'
 
 type Props = {
-  experience : Experience[]
+  experience : ExperienceType[]
 }
 
 export default function Experience({experience}: Props) {

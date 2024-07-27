@@ -24,7 +24,7 @@ export default function About({pageInfo}:Props) {
           viewport={{once:true}}
           src={urlFor(pageInfo?.profileImage).url()} 
           alt='Prathamesh in caves' 
-          className='object-cover -mb-8 mt-28 md:mt-20 md:mb-0 flex-shrink-0 w-36 h-36 rounded-full
+          className='object-cover hidden md:block -mb-8 mt-28 md:mt-20 md:mb-0 flex-shrink-0 w-36 h-36 rounded-full
           md:rounded-lg md:w-64 md:h-96 xl:w-[400px] xl:h-[500px]'/>
         
         <motion.div
@@ -32,7 +32,7 @@ export default function About({pageInfo}:Props) {
           whileInView={{opacity:1}}
           transition={{duration:1.5}}
           className='space-y-10 px-0 md:px-10'>
-          <h3 className='text-2xl font-semibold md:text-3xl md:mt-6'>
+          <h3 className='text-2xl hidden md:block font-semibold md:text-3xl md:mt-6'>
             Here's a <span className='underline decoration-slate-500'>little</span>  background
           </h3>
           <p className='text-[16px] md:text-lg  text-slate-200'>

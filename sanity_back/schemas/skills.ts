@@ -24,6 +24,14 @@ export default defineType({
         hotspot: true
       }
     },
+    {
+      name:"toPresent",
+      title:"ToPresent",
+      type:"boolean",
+      options:{
+        default:true
+      }
+    }
 
   ]
 

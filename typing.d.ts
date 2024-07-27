@@ -38,7 +38,8 @@ export interface Skills extends SanityBody {
     _type: 'skills';
     title : string;
     progress: number;
-    heroImage: Image
+    heroImage: Image;
+    toPresent: boolean;
 }
 
 export interface Experience extends SanityBody {
