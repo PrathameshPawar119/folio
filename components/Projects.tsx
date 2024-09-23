@@ -1,4 +1,4 @@
-import React, { useRef, useState, useEffect } from 'react';
+import React, { useRef } from 'react';
 import { motion } from 'framer-motion';
 import { urlFor } from '@/sanity';
 import { Projects as ProjectType } from '@/typing';
@@ -9,7 +9,6 @@ type Props = {
 
 export default function Projects({ projects }: Props) {
   const scrollContainerRef = useRef<HTMLDivElement | null>(null);
-  const [shouldShowNextButton, setShouldShowNextButton] = useState(false);
 
   // Function to handle click and scroll right
   const handleSwipeRight = () => {
@@ -18,8 +17,11 @@ export default function Projects({ projects }: Props) {
       const itemWidth = container.scrollWidth / projects.length;
       const maxScrollLeft = container.scrollWidth - container.clientWidth;
 
-      // Calculate the next scroll position
-      const newScrollLeft = Math.min(container.scrollLeft + itemWidth, maxScrollLeft);
+      // Check if we're at the end and loop back to the start
+      const newScrollLeft =
+        container.scrollLeft + itemWidth >= maxScrollLeft
+          ? 0 // Reset to the first project when at the last
+          : container.scrollLeft + itemWidth;
 
       container.scrollTo({
         left: newScrollLeft,
@@ -27,29 +29,6 @@ export default function Projects({ projects }: Props) {
       });
     }
   };
-
-  // Track the scroll state to show or hide the "Next" button
-  const updateButtonVisibility = () => {
-    if (scrollContainerRef.current) {
-      const container = scrollContainerRef.current;
-      const isScrollable = container.scrollLeft + container.clientWidth < container.scrollWidth;
-      setShouldShowNextButton(isScrollable);
-    }
-  };
-
-  useEffect(() => {
-    updateButtonVisibility(); // Initial check
-
-    // Add scroll event listener to update the button visibility dynamically
-    if (scrollContainerRef.current) {
-      const container = scrollContainerRef.current;
-      container.addEventListener('scroll', updateButtonVisibility);
-
-      return () => {
-        container.removeEventListener('scroll', updateButtonVisibility);
-      };
-    }
-  }, [projects]); // Recalculate when the projects list changes
 
   return (
     <motion.div
@@ -113,11 +92,9 @@ export default function Projects({ projects }: Props) {
               <p className="text-gray-200 text-sm sm:text-base md:text-lg lg:text-xl">
                 {project.summary}
               </p>
-              {shouldShowNextButton && (
-                <div className="text-lg text-gray-400 cursor-pointer" onClick={handleSwipeRight}>
-                  Next →
-                </div>
-              )}
+              <div className="text-lg text-gray-400 cursor-pointer" onClick={handleSwipeRight}>
+                Next →
+              </div>
             </motion.div>
           </div>
         ))}
