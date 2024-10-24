@@ -16,6 +16,7 @@ import { fetchExperience } from '@/utils/fetchExperience'
 import { fetchProjects } from '@/utils/fetchProjects'
 import { fetchSkills } from '@/utils/fetchSkills'
 import { fetchSocials } from '@/utils/fetchSocials'
+import ogimage from "../public/images/og-image.png"
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -62,7 +63,7 @@ export default function Home({pageInfo, experience, projects, skills, socials}: 
   <meta property="og:url" content="https://prathameshpawar.in/" />
   <meta property="og:title" content="Prathamesh Pawar | Engineer, Developer & AI Enthusiast" />
   <meta property="og:description" content="Explore the portfolio of Prathamesh Pawar, a Computer Science Engineer specializing in AI, ML, and Full-Stack Development." />
-  <meta property="og:image" content="https://prathameshpawar.in/static/images/og-image.png" />
+  <meta property="og:image" content={ogimage.src} />
   <meta property="og:site_name" content="Prathamesh Pawar's Portfolio" />
   
   {/* Twitter */}
@@ -70,7 +71,7 @@ export default function Home({pageInfo, experience, projects, skills, socials}: 
   <meta property="twitter:url" content="https://prathameshpawar.in/" />
   <meta property="twitter:title" content="Prathamesh Pawar | Engineer, Developer & AI Enthusiast" />
   <meta property="twitter:description" content="Discover the portfolio of Prathamesh Pawar, a Computer Science Engineer focusing on AI, ML, and Full-Stack Development." />
-  <meta property="twitter:image" content="https://prathameshpawar.in/static/images/og-image.png" />
+  <meta property="twitter:image" content={ogimage.src} />
 
   {/* Additional SEO Meta Tags */}
   <meta name="canonical" content="https://prathameshpawar.in/" />
