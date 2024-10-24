@@ -45,12 +45,41 @@ export default function Home({pageInfo, experience, projects, skills, socials}: 
     <main
     className={`bg-black text-white h-screen overflow-y-scroll overflow-x-hidden snap-y snap-mandatory scroll-smooth ${inter.className}`}
     >
-      <Head>
-        <title>
-          Prathamesh Pawar
-        </title>
-        <meta name="google-site-verification" content="60_7SYi3TgmDiIlLJX2kG8Yb3Z3WhnSe-S42aI1qhSM" />
-      </Head>
+<Head>
+  {/* Primary Meta Tags */}
+  <title>Prathamesh Pawar | Engineer, Developer & AI Enthusiast</title>
+  <meta name="title" content="Prathamesh Pawar | Engineer, Developer & AI Enthusiast" />
+  <meta name="description" content="I am Prathamesh Pawar, a Computer Science Engineer specializing in AI, ML, Frontend & Backend Development. Explore my projects, experience, and skills." />
+  <meta name="keywords" content="Prathamesh Pawar, AI, ML, Frontend Developer, Backend Developer, Portfolio, Engineer, Projects, Skills" />
+  <meta name="robots" content="index, follow" />
+  <meta name="language" content="English" />
+  <meta name="author" content="Prathamesh Pawar" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="google-site-verification" content="60_7SYi3TgmDiIlLJX2kG8Yb3Z3WhnSe-S42aI1qhSM" />
+
+  {/* Open Graph / Facebook */}
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://prathameshpawar.in/" />
+  <meta property="og:title" content="Prathamesh Pawar | Engineer, Developer & AI Enthusiast" />
+  <meta property="og:description" content="Explore the portfolio of Prathamesh Pawar, a Computer Science Engineer specializing in AI, ML, and Full-Stack Development." />
+  <meta property="og:image" content="https://prathameshpawar.in/static/images/og-image.jpg" />
+  <meta property="og:site_name" content="Prathamesh Pawar's Portfolio" />
+  
+  {/* Twitter */}
+  <meta property="twitter:card" content="summary_large_image" />
+  <meta property="twitter:url" content="https://prathameshpawar.in/" />
+  <meta property="twitter:title" content="Prathamesh Pawar | Engineer, Developer & AI Enthusiast" />
+  <meta property="twitter:description" content="Discover the portfolio of Prathamesh Pawar, a Computer Science Engineer focusing on AI, ML, and Full-Stack Development." />
+  <meta property="twitter:image" content="https://prathameshpawar.in/static/images/twitter-image.jpg" />
+
+  {/* Additional SEO Meta Tags */}
+  <meta name="canonical" content="https://prathameshpawar.in/" />
+  <link rel="canonical" href="https://prathameshpawar.in/" />
+  <link rel="icon" href="/static/icons/favicon.ico" />
+  <meta property="og:locale" content="en_US" />
+  <meta name="google-site-verification" content="60_7SYi3TgmDiIlLJX2kG8Yb3Z3WhnSe-S42aI1qhSM" />
+</Head>
+
 
 
         <div className='sticky top-0 mb-100' style={{zIndex:26}}>
