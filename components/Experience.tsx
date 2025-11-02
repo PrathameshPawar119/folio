@@ -8,6 +8,11 @@ type Props = {
 }
 
 export default function Experience({experience}: Props) {
+
+    const sortedExperiences = experience
+    ?.slice()
+    .sort((a, b) => new Date(b.dateStarted).getTime() - new Date(a.dateStarted).getTime())
+
   return (
     <motion.div
         initial={{opacity:0}}
@@ -18,7 +23,7 @@ export default function Experience({experience}: Props) {
       
       <div className="ExpCardHolder w-full flex space-x-5 overflow-x-scroll snap-x p-10 snap-mandatory mt-24 md:mt-32">
         {
-            experience?.map((exp)=>(
+            sortedExperiences?.map((exp)=>(
               <ExperienceCard key={exp._id} exp={exp}/>
             ))
         }
